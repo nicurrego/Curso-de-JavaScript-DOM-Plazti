@@ -5,61 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    .menu {
-      background-color: rgb(224, 224, 224);
-      font-size: 16px;
-    }
-
-    .main-menu {
-      color: green
-    }
-
-    .visible {
-      display: block;
-    }
-
-    .invisible {
-      display: none;
-    }
-  </style>
 </head>
 
 <body>
-  <header>
-    <h1 id="app-title">Soy el header de esta app</h1>
-    <menu class="menu">
-      <p>Algo de texto ejemplo</p>
-      <ul id="parent">
-        <li><a href="#">Home</a></li>
-        <li class="menu-items"><a href="#">About me</a></li>
-        <li class="menu-items"><a href="#">Blogs</a></li>
-        <li class="menu-items"><a href="#">Contact</a></li>
-      </ul>
-      <section></section>
-    </menu>
-  </header>
-  <main>
-    <button>Toggle visibility</button>
-    <section>
-      <p>Soy el texto principal de esta <span>app</span></p>
-    </section>
-    <section>
-      <p>Soy el texto principal de esta <span>app</span></p>
-    </section>
-    <section>
-      <p>Soy el texto secundario de esta app</p>
-      <p>Soy el texto secundario de esta app</p>
-    </section>
-  </main>
+  <section id="contentArea">
+    <p>Texto dentro de un contenedor.</p>
+  </section>
+  <section>
+    <ul id="listArea">
+
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+
+    </ul>
+  </section>
+
   <script src="sandBox.js"></script>
 </body>
 
 </html>
 
-<!-- const title = document.querySelector("#app-title")
-undefined
-title.style.color = "red"
-'red' -->
 
-<!-- Esta modificacion agraga estilo en linea, lo que puede causar complicacines en el archivo CSS. -->
+<!-- const contentArea = document.getElementById("contentArea") -->
+ 
+<!-- contentArea.innerHTML = "<p>Este es un nuevo parrafo</p>" -->
+<!-- contentArea.insertAdjacentHTML("beforeend", "<p>Este es un NUEVO nuevo parrafo</p>") -->
