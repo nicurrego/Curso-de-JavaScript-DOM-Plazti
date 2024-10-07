@@ -1,0 +1,68 @@
+body{
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  background-color: rgb(233, 233, 233);
+}
+.task-manager{
+  width: 80%;
+  background-color: aliceblue;
+  padding:0 20px;
+  box-sizing: border-box;
+}
+h1{
+  font-size: 4em;
+}
+#task-form input{
+  width: 60%;
+  height: 2em;
+  padding: 0 1em;
+  margin: 0 3em;
+  border: none;
+  background-color: rgba(58, 51, 51, 0.685);
+  color: aliceblue;
+}
+#task-form input::placeholder{
+  font-family: monospace;
+  color: aliceblue;
+}
+ul{
+  display: flex;
+  margin: 40px 1em;
+  padding: 0;
+}
+li{
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+  align-items: center;
+  font-size: 2em;
+  width: 60%;
+  height: 2em;
+  padding: 0 1em;
+  background-color: rgba(9, 101, 187, 0.575);
+  color: rgb(38, 39, 41);
+}
+li span{
+  font-size: 1em;
+  margin-left: 2em;
+}
+#toggle-theme-btn{
+  position: absolute;
+  left: 2px;
+  background-color: aliceblue;
+  border: none;
+  padding: 2px 1em;
+  border-radius: 13px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+}
+#task-form button{
+  background-color: #288d2c;   /* Color de fondo verde */
+  border: none;
+  color: white;                /* Texto en blanco */
+  padding: 12px 24px;          /* Espaciado interno */
+  font-size: 16px;             /* Tamaño del texto */
+  border-radius: 8px;          /* Bordes redondeados */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+}
