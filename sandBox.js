@@ -1,24 +1,11 @@
-const container = document.querySelector(".container")
-
 const button = document.querySelector("button")
 
-container.addEventListener("mouseover", () => {
-    container.style.backgroundColor = "blue"
-  });
+const buttonClicked = (event) =>{
+  console.log(event);
+  console.log(event.target);
+  console.log(event.target.id);
+  console.log(event.target.textContent);
+  
+}
 
-  container.addEventListener("mouseout", () =>{
-    container.style.backgroundColor = "red"
-  })
-
-  // button.addEventListener("click", () => {
-  //   alert("Button clicked!")
-  // })
-  const buttonClickCallBack = () => {
-    alert("Button Clicked")
-  };
-
-  button.addEventListener("click", buttonClickCallBack);
-
-  setTimeout(() => {
-    button.removeEventListener("click", buttonClickCallBack);
-  }, 2000)
+button.addEventListener("click",buttonClicked)
