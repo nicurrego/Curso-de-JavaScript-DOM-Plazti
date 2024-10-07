@@ -1,15 +1,11 @@
-// const listItems = document.querySelectorAll("li")
+const taskForm = document.getElementById("task-form")
+const taskList = document.getElementById("task-list")
 
-// listItems.forEach((item) => {
-//   item.addEventListener("click", (event) =>{
-//     event.target.classList.toggle("highlight")
-//   })
-// })
+taskForm.addEventListener("submit", (event) =>{
+  event.preventDefault()
 
-const list = document.querySelector("ul")
-
-list.addEventListener("click", (event) =>{
-  event.target.closest("li").classList.toggle("highlight")
+  const taskInput = document.getElementById("task-input")
+  const task = taskInput.value;
+  console.log(task);
 })
 
-// con el segundo metodo me aseguro que solo las mismas etiquetas sufran cambios
