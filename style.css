@@ -9,6 +9,8 @@ body{
   background-color: aliceblue;
   padding:0 20px;
   box-sizing: border-box;
+  box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+
 }
 h1{
   font-size: 4em;
