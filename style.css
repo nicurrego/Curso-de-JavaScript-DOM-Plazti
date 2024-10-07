@@ -30,12 +30,14 @@ h1{
 }
 ul{
   display: flex;
+  flex-direction: column;
   margin: 40px 1em;
   padding: 0;
 }
 li{
   display: flex;
   list-style: none;
+  margin-bottom: 20px;
   font-weight: bold;
   align-items: center;
   font-size: 2em;
