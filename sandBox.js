@@ -1,11 +1,7 @@
-const button = document.querySelector("button")
+const form = document.getElementById("myForm")
 
-const buttonClicked = (event) =>{
-  console.log(event);
-  console.log(event.target);
-  console.log(event.target.id);
-  console.log(event.target.textContent);
-  
-}
-
-button.addEventListener("click",buttonClicked)
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const name = form.elements("name").value
+  console.log(name)
+})
