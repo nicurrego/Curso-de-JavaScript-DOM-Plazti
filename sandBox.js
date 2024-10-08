@@ -1,14 +1,17 @@
 const taskForm = document.getElementById("task-form")
 const taskList = document.getElementById("task-list")
 
+loadTasks();
 taskForm.addEventListener("submit", (event) =>{
   event.preventDefault()
+
 
   const taskInput = document.getElementById("task-input")
   const task = taskInput.value;
 
   if (task){
     taskList.append(createTaskElement(task));
+    storeTaskInLocalStorage(task)
     taskInput.value = ""
   }
 });
@@ -44,4 +47,16 @@ function editTask(taskItem) {
   if (newTask !== null){
     taskItem.firstChild.textContent = newTask;
   }
+}
+function storeTaskInLocalStorage(task){
+  const tasks = JSON.parse(localStorage.getItem("tasks")||"[]")
+
+  tasks.push(task)
+  localStorage.setItem("tasks", JSON.stringify(tasks))
+}
+function loadTasks() {
+  const tasks = JSON.parse(localStorage.getItem("tasks")||"[]")
+  tasks.forEach((task) => {
+    taskList.appendChild(createTaskElement(task))
+  });
 }
