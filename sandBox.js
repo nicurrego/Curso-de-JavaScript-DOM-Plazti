@@ -47,6 +47,7 @@ function editTask(taskItem) {
   if (newTask !== null){
     taskItem.firstChild.textContent = newTask;
   }
+  updateLocalStorage()
 }
 function storeTaskInLocalStorage(task){
   const tasks = JSON.parse(localStorage.getItem("tasks")||"[]")
@@ -59,4 +60,10 @@ function loadTasks() {
   tasks.forEach((task) => {
     taskList.appendChild(createTaskElement(task))
   });
+}
+
+function updateLocalStorage() {
+  const tasks = Array.from(taskList.querySelectorAll("li")).map((li) => li.firstChild.textContent)
+  
+  localStorage.setItem("tasks", JSON.stringify(tasks))
 }
