@@ -38,6 +38,7 @@ taskList.addEventListener("click", (event) => {
 
 function deleteTask(taskItem) {
   if (confirm("Deseas borrar la tarea?")){
+    removeFromLocalStorage(taskItem)
     taskItem.remove();
   }
 }
@@ -66,4 +67,11 @@ function updateLocalStorage() {
   const tasks = Array.from(taskList.querySelectorAll("li")).map((li) => li.firstChild.textContent)
   
   localStorage.setItem("tasks", JSON.stringify(tasks))
+}
+function removeFromLocalStorage(taskContent) {
+  const tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
+
+  const updateTasks = tasks.filter((task) => task !== taskContent);
+
+  localStorage.setItem("tasks", JSON.stringify(updateTasks));
 }
